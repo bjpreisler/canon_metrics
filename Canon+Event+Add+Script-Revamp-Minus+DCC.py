@@ -41,7 +41,7 @@ import datetime
 
 
 ## 2 dev db connections needed to test
-password = open("C:\\Users\\brian.preisler\\Dropbox\\Growth\\Data Analysis\\Event Analysis\\Master Canon of Event Metrics\\Python Data Pulls\\qgi_db_password.txt","r")  
+password = open(,"r")  
 pw = password.read()  
 dev1_db=pymysql.connect( host="localhost",
                         user="python",
@@ -58,7 +58,7 @@ dev2_db=pymysql.connect( host="localhost",
 
 
 #2 live db connections needed to run queries
-password2 = open("C:\\Users\\brian.preisler\\Dropbox\\Growth\\Data Analysis\\Event Analysis\\Master Canon of Event Metrics\\Python Data Pulls\\acts_db_pw.txt","r")  
+password2 = open(,"r")  
 pw2 = password2.read()  
 live1_db=pymysql.connect( host="acts247.focus.org",
                         user="qgi",
@@ -104,10 +104,9 @@ type_id = 1
 # 1. CSV has all user ids that attended events
 # 2. Remove any CANCELLED events or event names with odd characters (accents, etc.)
 # 3. Remove STAFF members
-event_user_csv_test = 'C:\\Users\\brian.preisler\\Dropbox\\Growth\\Data Analysis\\Event Analysis\\Master Canon of Event Metrics\\Python Data Pulls\\all_mission_participants_and_acts_IDs_test.csv'
+event_user_csv_test = ''
 
-event_user_csv_full = 'C:\\Users\\brian.preisler\\Dropbox\\Growth\\Data Analysis\\Event Analysis\\Master Canon of Event Metrics\\Python Data Pulls\\all_mission_participants_and_acts_IDs.csv'
-
+event_user_csv_full = ''
 event_user_csv = event_user_csv_full
 
 #______________________________
@@ -115,8 +114,7 @@ event_user_csv = event_user_csv_full
 #Filepath of final dataset csv from all 4 queries
 day = time.strftime("%m-%d-%Y")
 file_name = 'event_dataset_' + day + '.csv'
-file_path = 'C:\\Users\\brian.preisler\\Dropbox\\Growth\\Data Analysis\\Event Analysis\\Master Canon of Event Metrics\\Python Data Pulls\\' + file_name
-
+file_path = ''
 
 
 # In[5]:
